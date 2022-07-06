@@ -1,6 +1,5 @@
 package com.foodmarket.app.statistic.model;
 
-import java.math.BigInteger;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -18,5 +17,6 @@ public interface StatisticOrderItemRepository extends JpaRepository<OrderItem, I
 	//public List<productStatistic> getStatisticCount(@Param(value="productName") String productName, @Param(value="sales") Integer sales);
 	
 	public List<OrderItem> findAll();
+
 
 }

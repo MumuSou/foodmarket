@@ -1,6 +1,5 @@
 package com.foodmarket.app.statistic.model;
 
-import java.math.BigInteger;
 import java.util.List;
 
 import javax.transaction.Transactional;

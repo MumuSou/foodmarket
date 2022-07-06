@@ -129,7 +129,7 @@
 					<img src="${contextRoot}/img/hot.png" style="width:1110px">
 				</div>
 					<div style="background-color: rgb(255, 145, 129);  border-bottom-left-radius: 30px; border-bottom-right-radius: 30px"> 
-						<div style="width:1100px; height: 285	px; margin: 0px auto;">
+						<div style="width:1100px; height: 285px; margin: 0px auto;">
 						<ul class="responsive_topsale" style="list-style-type: none; padding-left:15px">
 						
 							<li style="text-align: center; width:225px">								

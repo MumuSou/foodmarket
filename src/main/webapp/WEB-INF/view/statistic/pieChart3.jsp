@@ -8,15 +8,15 @@
 <html>
 <head>
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 <script src="${contextRoot}/js/jquery-3.6.0.js"></script>
 <%-- <script src="${contextRoot}/js/bootstrap.bundle.min.js"></script> --%>
 <script src="${contextRoot}/js/highcharts.src.js"></script>
 <script src="${contextRoot}/js/exporting.src.js"></script>
+
 <%-- <link href="${contextRoot}/css/bootstrap.min.css" rel="stylesheet"> --%>
 <meta charset="UTF-8">
-<title>商品銷量分布</title>
+<title>銷售圓餅圖</title>
 
 </head>
 <body>
@@ -35,13 +35,13 @@
 		var download
 		var myPieChart;
 		const data = {
-				labels : rtnMapLabels,
-				datasets : rtnMapData
+				name : rtnMapLabels,
+				y : rtnMapData,
+				drilldown : rtnMapLabels
 			};
 		$.get(
-						"${contextRoot}/productCount",
+						"${contextRoot}/productCountVegetable",
 						function(rtnMap) {
-
 							var array = [];
 							for ( var key in rtnMap) {
 								array.push({
@@ -54,12 +54,12 @@
 										: ((b.value < a.value) ? -1 : 0)
 							});
 
+
 							for (var i = 0; i < sorted1.length; i++) {
 								rtnMapResult.push([ sorted1[i].name,
-										sorted1[i].value ])
+										sorted1[i].value,sorted1[i].name ])
 							}
 							console.log(rtnMapResult)
-							console.log(data)
 							Highcharts.chart('chart1', {
 												chart : {
 													type : 'pie',
@@ -75,7 +75,7 @@
 														'#D770AD', '#c42525',
 														'#a6c96a' ],
 												title : {
-													text : '商品銷量分布',
+													text : '銷售圓餅圖',
 // 													margin: 25,  //調整title和圖之間的距離
 													style : {
 														color : '#000',
@@ -115,8 +115,50 @@
 													}
 												},
 												series : [ {
-													name : '售出數量',
+													name : 'Category',
 													type : 'pie',
+// 													drilldown: {
+// 												        series: [
+// 												            {
+// 												                name: "Chrome",
+// 												                id: "Chrome",
+// 												                data: [
+// 												                ]
+// 												            },
+// 												            {
+// 												                name: "Firefox",
+// 												                id: "Firefox",
+// 												                data: [
+// 												                ]
+// 												            },
+// 												            {
+// 												                name: "Internet Explorer",
+// 												                id: "Internet Explorer",
+// 												                data: [
+												                    
+// 												                ]
+// 												            },
+// 												            {
+// 												                name: "Safari",
+// 												                id: "Safari",
+// 												                data: [
+												                   
+// 												                ]
+// 												            },
+// 												            {
+// 												                name: "Edge",
+// 												                id: "Edge",
+// 												                data: [
+												                    
+// 												                ]
+// 												            },
+// 												            {
+// 												                name: "Opera",
+// 												                id: "Opera",
+// 												                data: [
+												                   
+// 												                ]
+// 												            }
 													data : rtnMapResult,
 													size : 350,  //這個是圖的大小
 													dataLabels: {

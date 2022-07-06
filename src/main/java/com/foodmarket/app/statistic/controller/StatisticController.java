@@ -1,42 +1,28 @@
 package com.foodmarket.app.statistic.controller;
 
-import java.util.List;
 import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.foodmarket.app.statistic.service.StatisticOrderItemService;
-import com.foodmarket.app.statistic.service.StatisticService;
-
 
 @Controller
 public class StatisticController {
 	
-	
 	@Autowired
 	private StatisticOrderItemService soiService;
-	
 	
 	@GetMapping("/statistic")
 	public String productCountTest() {
 		return "statistic/pieChart";
 	}
 	
-//	@GetMapping("/statistic")
-//	public String productCountCategory() {
-//		return "statistic/productCountCategory";
-//	}
-//	
+	@GetMapping("/statisticCategory")
+	public String productCountCategory() {
+		return "statistic/pieChart2";
+	}
+	
 	@GetMapping("/productCount")
 	@ResponseBody
 	public Map getStatisticCount(){
@@ -62,6 +48,41 @@ public class StatisticController {
 	public Map getProductId(){
 		Map rtnMap = soiService.productId();		
 		return rtnMap;
+	}
+	
+	@GetMapping("/productCountCategory")
+	@ResponseBody
+	public Map getProductCountCategory(){
+		Map rtnMap = soiService.productCountCategory();		
+		return rtnMap;
+	}
+	
+	@GetMapping("/productCountVegetable")
+	@ResponseBody
+	public Map getProductCountVegetable(){
+		Map rtnMapVegetable = soiService.productCountVegetable();		
+		return rtnMapVegetable;
+	}
+	
+	@GetMapping("/productCountMeat")
+	@ResponseBody
+	public Map getProductCountMeat(){
+		Map rtnMapMeat = soiService.productCountMeat();		
+		return rtnMapMeat;
+	}
+	
+	@GetMapping("/productCountFruit")
+	@ResponseBody
+	public Map getProductCountFruit(){
+		Map rtnMapFruit = soiService.productCountFruit();		
+		return rtnMapFruit;
+	}
+	
+	@GetMapping("/productCountSeafood")
+	@ResponseBody
+	public Map getProductCountSeafood(){
+		Map rtnMapSeafood = soiService.productCountSeafood();		
+		return rtnMapSeafood;
 	}
 	
 
