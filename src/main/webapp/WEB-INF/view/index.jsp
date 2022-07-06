@@ -378,7 +378,7 @@
 								});
 								}
 								var name_sorted = array.sort(function(a, b) {
-									return (a.value < b.value) ? 1 : ((b.value < a.value) ? -1 : 0)
+									return +(b.value > a.value) || +(a.value === b.value) - 1
 								});
 								$(document).ready(
 									function() {
@@ -394,7 +394,7 @@
 												}
 												console.log(name_sorted)
 												var img_sorted = array.sort(function(a, b) {
-													return (a.value < b.value) ? 1 : ((b.value < a.value) ? -1 : 0)
+													return +(b.value > a.value) || +(a.value === b.value) - 1
 												});
 												$(document).ready(
 														function() {
@@ -409,13 +409,11 @@
 																	});
 																	}
 																	var id_sorted = array.sort(function(a, b) {
-																		return (a.value < b.value) ? 1 : ((b.value < a.value) ? -1 : 0)
+																		return +(b.value > a.value) || +(a.value === b.value) - 1
 																	});
 																	console.log(id_sorted)
 																	console.log(id_sorted[0].name)
-												
-												
-												
+
 												name_data0 = ''
 												img_data0 = ''
 												id_data0 = ''
@@ -430,6 +428,8 @@
 												img_data0 += '">'
 												img_data0 += '</a>'
 												$('#img_data0').append(img_data0)
+// 												name_data0 += name_obj0.name
+// 												$('#name_data0').append(name_data0)	
 
 												name_data1 = ''
 												img_data1 = ''
@@ -445,6 +445,8 @@
 												img_data1 += '">'
 												img_data1 += '</a>'
 												$('#img_data1').append(img_data1)
+// 												name_data1 += name_obj1.name
+// 												$('#name_data1').append(name_data1)	
 												
 												name_data2 = ''
 												img_data2 = ''
@@ -460,6 +462,8 @@
 												img_data2 += '"alt="image">'
 												img_data2 += '</a>'
 												$('#img_data2').append(img_data2)
+// 												name_data2 += name_obj2.name
+// 												$('#name_data2').append(name_data2)	
 												
 												name_data3 = ''
 												img_data3 = ''
@@ -475,6 +479,8 @@
 												img_data3 += '"alt="image">'
 												img_data3 += '</a>'
 												$('#img_data3').append(img_data3)
+// 												name_data3 += name_obj3.name
+// 												$('#name_data3').append(name_data3)	
 												
 												name_data4 = ''
 												img_data4 = ''
@@ -490,6 +496,8 @@
 												img_data4 += '"alt="image">'
 												img_data4 += '</a>'
 												$('#img_data4').append(img_data4)
+// 												name_data4 += name_obj4.name
+// 												$('#name_data4').append(name_data4)	
 												
 												name_data5 = ''
 												img_data5 = ''
@@ -505,6 +513,8 @@
 												img_data5 += '"alt="image">'
 												img_data5 += '</a>'
 												$('#img_data5').append(img_data5)
+// 												name_data5 += name_obj5.name
+// 												$('#name_data5').append(name_data5)	
 												
 												name_data6 = ''
 												img_data6 = ''
@@ -520,6 +530,8 @@
 												img_data6 += '"alt="image">'
 												img_data6 += '</a>'
 												$('#img_data6').append(img_data6)
+// 												name_data6 += name_obj6.name
+// 												$('#name_data6').append(name_data6)	
 												
 												name_data7 = ''
 												img_data7 = ''
@@ -535,6 +547,8 @@
 												img_data7 += '"alt="image">'
 												img_data7 += '</a>'
 												$('#img_data7').append(img_data7)
+// 												name_data7 += name_obj7.name
+// 												$('#name_data7').append(name_data7)	
 												
 												name_data8 = ''
 												img_data8 = ''
@@ -550,6 +564,8 @@
 												img_data8 += '"alt="image">'
 												img_data8 += '</a>'
 												$('#img_data8').append(img_data8)
+// 												name_data8 += name_obj8.name
+// 												$('#name_data8').append(name_data8)	
 												
 												name_data9 = ''
 												img_data9 = ''
@@ -565,6 +581,8 @@
 												img_data9 += '"alt="image">'
 												img_data9 += '</a>'
 												$('#img_data9').append(img_data9)
+// 												name_data9 += name_obj9.name
+// 												$('#name_data9').append(name_data9)	
 												
 												name_data10 = ''
 												img_data10 = ''
@@ -580,6 +598,8 @@
 												img_data10 += '"alt="image">'
 												img_data10 += '</a>'
 												$('#img_data10').append(img_data10)
+// 												name_data10 += name_obj10.name
+// 												$('#name_data10').append(name_data10)	
 												
 												name_data11 = ''
 												img_data11 = ''
@@ -595,6 +615,8 @@
 												img_data11 += '"alt="image">'
 												img_data11 += '</a>'
 												$('#img_data11').append(img_data11)
+// 												name_data11 += name_obj11.name
+// 												$('#name_data11').append(name_data11)	
 												
 												name_data12 = ''
 												img_data12 = ''
@@ -610,6 +632,8 @@
 												img_data12 += '"alt="image">'
 												img_data12 += '</a>'
 												$('#img_data12').append(img_data12)
+// 												name_data12 += name_obj12.name
+// 												$('#name_data12').append(name_data12)	
 												
 												name_data13 = ''
 												img_data13 = ''
@@ -625,6 +649,8 @@
 												img_data13 += '"alt="image">'
 												img_data13 += '</a>'
 												$('#img_data13').append(img_data13)
+// 												name_data13 += name_obj13.name
+// 												$('#name_data13').append(name_data13)	
 												
 												name_data14 = ''
 												img_data14 = ''
@@ -640,6 +666,8 @@
 												img_data14 += '"alt="image">'
 												img_data14 += '</a>'
 												$('#img_data14').append(img_data14)
+// 												name_data14 += name_obj14.name
+// 												$('#name_data14').append(name_data14)	
 	
 												name0 = ''
 													var name_obj0 = name_sorted[0]

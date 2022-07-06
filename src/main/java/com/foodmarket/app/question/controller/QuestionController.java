@@ -50,6 +50,7 @@ public class QuestionController {
 		categoryList.add("其他");
 		model.addAttribute("categoryList",categoryList);
 		return "redirect:/question/viewAllQuestion";
+//		return "question/addQuestion";
 	}
 	
 	@GetMapping("question/allQuestion")

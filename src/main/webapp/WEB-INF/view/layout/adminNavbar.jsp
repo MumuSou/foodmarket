@@ -214,8 +214,7 @@
  
 <script src="${contextRoot}/js/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="${contextRoot}/js/slick.js"></script>
- <script
-  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossorigin="anonymous"></script>
  <script>
@@ -225,8 +224,7 @@
  </script>
  <script src="${contextRoot}/js/bootstrap.bundle.min.js"></script>
 
- <script
-  src="${contextRoot}/js/Chart.min.js"></script>
+ <script src="${contextRoot}/js/Chart.min.js"></script>
  <script src="${contextRoot}/js/dashboard.js"></script>
  
 <script src="${contextRoot}/js/feather.min.js"></script>
