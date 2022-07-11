@@ -26,7 +26,7 @@ table, td, th {
 								document.getElementById("productname").value = "松花溏心皮蛋220g(4入)";
 								document.getElementById("categoryid").selectedIndex = "4";
 								document.getElementById("productprice").value = "86";
-								document.getElementById("takedown").selectedIndex = "1";
+								document.getElementById("takedown").selectedIndex = "0";
 								document.getElementById("productdesciption").value = "嚴選鴨蛋遵循古法製成，品質嚴格把關用心研製， 粒粒好蛋、唇齒留香。";
 								document.getElementById("inventoryquantity").value = "2000";
 							});
@@ -38,7 +38,7 @@ table, td, th {
 								document.getElementById("productname").value = "香Q熟鹹蛋266g(4入)";
 								document.getElementById("categoryid").selectedIndex = "4";
 								document.getElementById("productprice").value = "85";
-								document.getElementById("takedown").selectedIndex = "0";
+								document.getElementById("takedown").selectedIndex = "1";
 								document.getElementById("productdesciption").value = "嚴選鴨蛋遵循古法製成，品質嚴格把關用心研製， 粒粒好蛋、唇齒留香。";
 								document.getElementById("inventoryquantity").value = "2000";
 							});
@@ -85,7 +85,7 @@ table, td, th {
 										<th style="text-align: center;" scope="col">新增日期</th>
 										<th style="text-align: center;" scope="col">商品介紹</th>
 										<th style="text-align: center;" scope="col">庫存數量</th>
-										<th style="text-align: center;" scope="col">上下架</th>
+										<th style="text-align: center;" scope="col">上架狀態</th>
 										<!-- 									<th scope="col">商品類別</th> -->
 										<!-- 								<th scope="col">修改人員</th> -->
 									</tr>
@@ -137,9 +137,9 @@ table, td, th {
 							<div class="btn-group " role="group">
 								<button id="autokeyin2" class="btn btn-light" type="submit">第2筆</button>
 							</div>
-							<div class="btn-group " role="group">
-								<button id="autokeyin3" class="btn btn-light" type="submit">第3筆</button>
-							</div>
+<!-- 							<div class="btn-group " role="group"> -->
+<!-- 								<button id="autokeyin3" class="btn btn-light" type="submit">第3筆</button> -->
+<!-- 							</div> -->
 						</div>
 						<div class="card-body">
 
@@ -236,7 +236,7 @@ table, td, th {
 									<div>
 										<div class="input-group mb-3">
 											<div class="input-group-prepend">
-												<label class="input-group-text" for="takedown">上下架</label>
+												<label class="input-group-text" for="takedown">上架狀態</label>
 											</div>
 											<form:select class="custom-select" id="takedown"
 												path="takedown">

@@ -97,8 +97,8 @@ $(window).ready(() => {
 })
 
 var oldPwdCheck = false;
-var pwd1Checked = false;
-var pwd2Checked = false;
+var pwd1Checked = true;
+var pwd2Checked = true;
 var oldPwdInput = $('#oldPassword').val();
 
 $(document).ready(function(){
@@ -162,6 +162,27 @@ $('#password').keyup(function(){
 		pwd1Checked = false;
 		lock();
 		$('#pswmsg')[0].innerHTML='請輸入至少六位數之密碼'
+	}
+});
+
+$('#password').keyup(function(){
+	var pswInput = $('#password').val();
+	var pswInput2 = $('#password2').val();
+	
+	if (pswInput2 == "") {
+		pwd2Checked = false;
+		lock();
+		$('#pswmsg2')[0].innerHTML='請再次輸入密碼'
+	}	
+	
+	if(pswInput2 != pswInput){
+		pwd2Checked = false;
+		lock();
+		$('#pswmsg2')[0].innerHTML='密碼不一致'	
+	}else{
+		pwd2Checked = true;
+		lock();
+		$('#pswmsg2')[0].innerHTML=''
 	}
 });
 

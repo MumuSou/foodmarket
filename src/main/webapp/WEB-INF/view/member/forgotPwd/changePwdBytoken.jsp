@@ -58,7 +58,7 @@ $('#input').click(function(){
 	$('#password2').val('a12345');
 })
 
-$('#password').blur(function(){
+$('#password').keyup(function(){
 	var pswInput = $('#password').val();
 // 	var pattern = new RegExp("^[0~9a-zA-Z!@#$%^&*]+$");
 	var pattern = new RegExp("^[A-Za-z0-9]+$");
@@ -78,6 +78,26 @@ $('#password').blur(function(){
 	} else {
 		$('#submit').attr("disabled", true);
 		$('#pswmsg')[0].innerHTML='請輸入至少六位數之密碼'
+	}
+});
+
+$('#password').keyup(function(){
+	var pswInput = $('#password').val();
+	var pswInput2 = $('#password2').val();
+	var pattern = new RegExp("^[A-Za-z0-9]+$");
+	
+	if (pswInput2 == "") {
+		$('#submit').attr("disabled", true);
+		$('#pswmsg2')[0].innerHTML='請再次輸入密碼'
+	}	
+	
+	if(pswInput2 != pswInput){
+		$('#submit').attr("disabled", true);
+		$('#pswmsg2')[0].innerHTML='密碼不一致'	
+	}else{
+		pswChecked = true;
+		$('#submit').attr("disabled", false);
+		$('#pswmsg2')[0].innerHTML=''
 	}
 });
 

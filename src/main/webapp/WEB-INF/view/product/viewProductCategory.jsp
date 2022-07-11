@@ -100,7 +100,7 @@ img {
 							<th scope="col">商品類別ID</th>
 							<th scope="col">商品類別名稱</th>
 <!-- 							<th scope="col">新增日期</th> -->
-							<th scope="col">上下架</th>
+							<th scope="col">上架狀態</th>
 <!-- 							<th scope="col">修改人員</th> -->
 							<th scope="col">功能</th>
 						</tr>

@@ -153,7 +153,7 @@ img {
 								<th scope="col" style="text-align: center;">新增日期</th>
 								<th scope="col" style="text-align: center;">商品介紹</th>
 								<th scope="col" style="text-align: center;">庫存數量</th>
-								<th scope="col" style="text-align: center;">上下架</th>
+								<th scope="col" style="text-align: center;">上架狀態</th>
 								<th scope="col" style="text-align: center;">功能</th>
 							</tr>
 						</thead>

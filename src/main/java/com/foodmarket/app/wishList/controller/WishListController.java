@@ -53,9 +53,10 @@ public class WishListController {
 		if (sessionUId.equals(id)) {
 			Member member = memberService.findById(id);
 
-			Page<WishList> wishList = wishListService.findByMemberPageable(p);
-
+			Page<WishList> wishList = wishListService.findByMemberPageable(p, id);
+			int num = wishList.getNumberOfElements();
 			m.addAttribute("page", wishList);
+			m.addAttribute("num", num);
 			logger.info("會員編號：" + member.getCustomerId() + "進入收藏商品");
 			return "member/wishlist";
 		}

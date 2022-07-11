@@ -39,7 +39,7 @@
 							<div>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">上下架</label>
+										<label class="input-group-text" for="inputGroupSelect01">上架狀態</label>
 									</div>
 									<form:select class="custom-select" id="inputGroupSelect01"
 										path="takeon">

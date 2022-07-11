@@ -59,9 +59,9 @@ public class WishListService implements WishListServiceInterface{
 	}
 
 	@Override
-	public Page<WishList> findByMemberPageable(Integer pageNumber) {
-		Pageable pgb = PageRequest.of(pageNumber-1, 5 ,Sort.Direction.ASC ,"product");
-		Page<WishList> mPage = dao.findAll(pgb);
+	public Page<WishList> findByMemberPageable(Integer pageNumber, Long Id) {
+		Pageable pgb = PageRequest.of(pageNumber-1, 5 ,Sort.Direction.ASC ,"productid");
+		Page<WishList> mPage = dao.findByMember(pgb, Id);
 		
 		return mPage;
 	}

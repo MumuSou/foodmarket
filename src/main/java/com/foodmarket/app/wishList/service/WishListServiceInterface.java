@@ -12,7 +12,7 @@ public interface WishListServiceInterface {
 	
 	public List<WishList> findByMember(Member member);
 	
-	public Page<WishList> findByMemberPageable(Integer pageNumber);
+	public Page<WishList> findByMemberPageable(Integer pageNumber, Long Id);
 	
 	public WishList save(WishList wishList);
 	
